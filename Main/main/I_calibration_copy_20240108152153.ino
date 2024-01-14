@@ -71,7 +71,7 @@ void loop() {
         currentMean = currentSampleSum / currentSampleCount;
         RMSCurrentMean = sqrt(currentMean);
         FinalRMSCurrent = RMSCurrentMean;
-        //FinalRMSCurrent = (((RMSCurrentMean / 1023) * supplyVoltage) / mVperAmpValue) - manualOffset;
+        FinalRMSCurrent = (((RMSCurrentMean / 1023) * supplyVoltage) / mVperAmpValue) - manualOffset;
 
         // Appliquer la correction de calibration
         FinalRMSCurrent = a * FinalRMSCurrent + b;
